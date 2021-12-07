@@ -1,6 +1,7 @@
 package com.hcml.emobileconnect.entity;
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,10 +13,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity(name = "REQUEST")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "REQUEST")
+
 public class Request {
 	
 	@Id
@@ -25,13 +27,13 @@ public class Request {
 	
 	@OneToOne
 	@JoinColumn(name = "cust_id")
-	@Column(name = "customer_id")
-	private Integer customerId;
+	//@Column(name = "customer_id")
+	private Customer customer;
 	
 	@OneToOne
 	@JoinColumn(name = "plan_id")
-	@Column(name = "plan_id")
-	private Integer planId;
+	//@Column(name = "plan_id")
+	private MobilePlan mobilePlan;
 	
 	@Column(name = "mobile_number")
 	private Long mobileNumber;

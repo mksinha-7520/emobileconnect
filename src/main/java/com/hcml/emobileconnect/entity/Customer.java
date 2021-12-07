@@ -12,10 +12,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity(name = "CUSTOMER")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "CUSTOMER")
+
 public class Customer  {
 	
 	@Id
@@ -41,7 +42,7 @@ public class Customer  {
 	@Column(name = "id_number")
 	private String idNumber;
 	
-	@OneToOne(mappedBy = "request")
+	@OneToOne(mappedBy = "customer")
 	private Request request;
 	
 	

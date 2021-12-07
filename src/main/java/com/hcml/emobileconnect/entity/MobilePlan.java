@@ -12,10 +12,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity(name = "MOBILE_PLAN")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "MOBILE_PLAN")
+
 public class MobilePlan {
 	
 	@Id
@@ -32,7 +33,7 @@ public class MobilePlan {
 	@Column(name = "plan_validity")
 	private Integer planValidity;
 	
-	@OneToOne(mappedBy = "request")
+	@OneToOne(mappedBy = "mobilePlan")
 	private Request request;
 
 }

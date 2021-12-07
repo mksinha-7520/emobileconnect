@@ -9,10 +9,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity(name = "MOBILE_NUMBER")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "MOBILE_NUMBER")
+
 public class MobileNumber {
 	
 	@Id
