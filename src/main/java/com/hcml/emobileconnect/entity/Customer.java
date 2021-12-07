@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "CUSTOMER")
-public class Customer {
+public class Customer  {
 	
 	@Id
 	@GeneratedValue
