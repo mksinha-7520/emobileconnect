@@ -36,4 +36,5 @@ public class MobilePlan {
 	@OneToOne(mappedBy = "mobilePlan")
 	private Request request;
 
+	
 }

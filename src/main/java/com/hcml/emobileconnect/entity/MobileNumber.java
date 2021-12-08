@@ -26,5 +26,7 @@ public class MobileNumber {
 	
 	@Column(name = "sim_status")
 	private String simStatus;
+	
+	
 
 }
