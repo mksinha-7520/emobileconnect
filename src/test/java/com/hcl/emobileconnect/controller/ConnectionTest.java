@@ -5,8 +5,7 @@ import java.util.List;
 
 import javax.ws.rs.core.MediaType;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.apache.http.HttpResponse;
@@ -14,10 +13,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.assertj.core.util.Arrays;
-import org.junit.Before;
-import org.junit.BeforeClass;
+
+
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
+
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -48,7 +47,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.mockito.BDDMockito.given;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class ConnectionTest {
 	
 	
@@ -61,7 +60,7 @@ public class ConnectionTest {
 	@Mock
 	RequestRepository requestRepositoryRequest;
 	
-	@Before
+	//@Before
 	void before() {
 		
 		mockMvc = MockMvcBuilders.standaloneSetup(connection).build();
